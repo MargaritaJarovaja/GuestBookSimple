@@ -1,16 +1,18 @@
 [
   {
-    "date": "2021-12-06T19:06<br>",
-    "namn": "Margarita<br>",
-    "efternamn": "Jarovaja<br>",
-    "email": "nord.ferro@gmail.com<br>",
-    "meddelande": "Poka!<br>"
+    "date": "2021-12-06T20:04<br>",
+    "namn": "Anastasija<br>",
+    "efternamn": "Pavlenkova<br>",
+    "email": "Pavlenkova@gmail.com<br>",
+    "meddelande": "Hej!\r\nDet är mycket trevligt att besöka din sida. Jag önskar dig välstånd och framgång!<br>",
+    "string": "------------------------------"
   },
   {
-    "date": "2021-12-06T19:06<br>",
-    "namn": "Edija<br>",
-    "efternamn": "Jansone<br>",
-    "email": "heja<br>",
-    "meddelande": "Heja<br>"
-  }  
+    "date": "2021-12-06T20:05<br>",
+    "namn": "Margarita <br>",
+    "efternamn": "Jarovaja<br>",
+    "email": "nord.ferro@gmail.com<br>",
+    "meddelande": "Hej alla!!<br>",
+    "string": "------------------------------"
+  }
 ]
