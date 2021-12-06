@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuestBook</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="javascript/klientskript.js"></script>
+</head>
+<body>
+   
+    
+
+    <!--<p>ERSÄTT_MED_SERVERGENERERAT_INNEHÅLL</p>-->
+
+    <form action="/skriv-fran-mall" method="post">
+        <h1>Guest book</h1>
+        <label for="name">Namn: </label><br><input type="text" name="name" required><br>
+        <span class="helper-text" data-error="skriv in namn" data-success="right"></span>
+        <label for="surname">Efternamn: </label><br><input type="text" name="surname" required><br>
+        <span class="helper-text" data-error="skriv in efternamn" data-success="right"></span>
+        <label for="email">Email: </label><br><input type="text" name="email" required><br>
+        <span class="helper-text" data-error="skriv in email" data-success="right"></span>
+        <label for="meddelande">Meddelande: </label><br><textarea type="text" name="meddelande" required></textarea><br>
+        <span class="helper-text" data-error="skriv in meddelande" data-success="right"></span>
+        <input type="submit" id="submit">
+        <p id="output"></p>
+    </form>
+
+    
+
+    <!--<div id="output2"></div>-->
+
+    <!--    I de data som ni hämtar från API:et finns ett attribut image, som är en länk som ni kan klistra in i en img-tagg typ så här:
+    <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/rtGDOeG9LzoerkDGZF9dnVeLppL.jpg">
+    -->
+
+
+</body>
+</html>
