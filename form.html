@@ -15,7 +15,7 @@
         <span class="helper-text" data-error="skriv in namn" data-success="right"></span>
         <label for="surname">Efternamn: </label><br><input type="text" name="surname" required><br>
         <span class="helper-text" data-error="skriv in efternamn" data-success="right"></span>
-        <label for="email">Email: </label><br><input type="text" name="email" required><br>
+        <label for="email">Email: </label><br><input type="text" name="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required><br>
         <span class="helper-text" data-error="skriv in email" data-success="right"></span>
         <label for="meddelande">Meddelande: </label><br><textarea type="text" name="meddelande" required></textarea><br>
         <span class="helper-text" data-error="skriv in meddelande" data-success="right"></span>
