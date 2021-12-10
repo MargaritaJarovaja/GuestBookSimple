@@ -11,7 +11,6 @@ app.get("/form", (req, res) => {
 });
 
 
-
 const fs = require("fs");
 app.get("/hamta-json", (req, res) => {
     console.log("Mottog förfrågan med XMLHttpRequest från klienten");
@@ -23,9 +22,7 @@ app.get("/hamta-json", (req, res) => {
 
 
 app.use(express.urlencoded({extended: true}));  
-app.post("/skriv-fran-mall", (req, res) => {
-    
-    
+app.post("/skriv-fran-mall", (req, res) => {  
  
     fs.readFile("form.html", function(err, data){
         fs.readFile("messages.json", function(err, postJson) {
@@ -33,8 +30,7 @@ app.post("/skriv-fran-mall", (req, res) => {
             let falt = JSON.parse(postJson);
             let date = new Date;
             let precisDate = date.toISOString();
-            precisDate = precisDate.substring(0, 16);
-            
+            precisDate = precisDate.substring(0, 16);            
 
             let nyUser = {    // skapa ny user
                 date: precisDate +'<br>',
@@ -46,29 +42,26 @@ app.post("/skriv-fran-mall", (req, res) => {
             };
 
             console.log(nyUser);
-            falt.push(nyUser);    // lägg till nya user
-
-            
+            falt.push(nyUser);    // lägg till nya user            
             
             let nyJson = JSON.stringify(falt, null, 2);
             fs.writeFile("messages.json", nyJson, (err) => {
                 if (err) throw err;
             });
             
-            let output = "";
-
-
-            
+            let output = "";           
 
 
             for (messages in falt) {
                 for (attribut in messages) {
                     output += messages[attribut] + " ";
-                }
+                };
                 output += "<br>";
-            }
+            };
+
             let html = data.toString().replace(output);
             res.send(html);
+
         });
     });
 });

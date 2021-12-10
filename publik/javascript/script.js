@@ -15,10 +15,11 @@ let hamtaData = function() {
             document.getElementById("output").innerHTML += "<br>";
         };
     };
+
     forfragan.send();                      
 };
+
 window.onload = function() {
     
     hamtaData();
-
 };
