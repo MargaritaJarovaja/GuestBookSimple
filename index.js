@@ -11,6 +11,7 @@ app.get("/form", (req, res) => {
 });
 
 
+
 const fs = require("fs");
 app.get("/hamta-json", (req, res) => {
     console.log("Mottog förfrågan med XMLHttpRequest från klienten");
@@ -23,6 +24,8 @@ app.get("/hamta-json", (req, res) => {
 
 app.use(express.urlencoded({extended: true}));  
 app.post("/skriv-fran-mall", (req, res) => {
+    
+    
  
     fs.readFile("form.html", function(err, data){
         fs.readFile("messages.json", function(err, postJson) {
@@ -44,6 +47,8 @@ app.post("/skriv-fran-mall", (req, res) => {
 
             console.log(nyUser);
             falt.push(nyUser);    // lägg till nya user
+
+            
             
             let nyJson = JSON.stringify(falt, null, 2);
             fs.writeFile("messages.json", nyJson, (err) => {
@@ -51,6 +56,11 @@ app.post("/skriv-fran-mall", (req, res) => {
             });
             
             let output = "";
+
+
+            
+
+
             for (messages in falt) {
                 for (attribut in messages) {
                     output += messages[attribut] + " ";
@@ -62,3 +72,4 @@ app.post("/skriv-fran-mall", (req, res) => {
         });
     });
 });
+        
